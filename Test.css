@@ -1,0 +1,31 @@
+﻿body {
+    direction:rtl;
+}
+
+.MenuStyle {    
+    background-color:deepskyblue;
+    margin-bottom:50px;    
+}
+#Menu1  {
+    font-size:16px;
+}
+
+#Menu1 a:Link,#Menu1 a:visited
+{
+ color : black ;
+}
+
+#Menu1 a.static:first-child
+{
+    text-decoration:underline;
+}    
+
+.loader{
+    display:block;
+    visibility:visible
+} 
+.imHidden{
+    display:none;
+    visibility:hidden;
+}
+    

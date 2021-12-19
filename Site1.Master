@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Tyuta.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    
+  
+    <title></title>
+    <script src ="Test.js"></script>
+    <%--<script src ="myJquery.js"></script>--%>
+    <link rel="stylesheet" runat="server" media="screen" href="~/Test.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <%--<h1>fggg</h1>--%>
+    </asp:ContentPlaceHolder>
+</head>
+<body dir="rtl">
+    <form id="form1" runat="server">
+    <div id="menus" style="display:flex; flex-direction:column">
+        <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False" Height="100px"  CssClass="MenuStyle" >
+                <DynamicMenuItemStyle CssClass="dd"  HorizontalPadding="25px" />               
+                <DynamicMenuStyle CssClass="MenuStyle" />
+                <Items>
+                    <asp:MenuItem Text="עריכת נתונים" Value="mnuEdit" >                        
+                        <asp:MenuItem Text="מסך ראשי" NavigateUrl="~/Main.aspx" Value="mnuMain"></asp:MenuItem>
+                        <asp:MenuItem Text="קליטת קבצים" NavigateUrl="~/Content1.aspx" Value="mnuInputFile" ></asp:MenuItem>                        
+                        <asp:MenuItem Text="הוספת הכשרה" NavigateUrl="~/AddTrainingType.aspx" Value="mnuAddTrainingType" ></asp:MenuItem>  
+                        <%--<asp:MenuItem Text="טסט" NavigateUrl="~/ExecCom.aspx" Value="mnuAddTrainingType" ></asp:MenuItem>--%>  
+                        <asp:MenuItem Text="יציאה" Value="mnuExit" ></asp:MenuItem>
+                    </asp:MenuItem>
+                    <%--<asp:MenuItem Text="תפריט ראשי" Value="mnuMain">
+                        <asp:MenuItem NavigateUrl="~/Content1.aspx?screen=mnuScr3" Text="מסך 3" Value="mnuScr3"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Main.aspx?screen=mnuScr4" Text="מסך 4" Value="mnuScr4"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="קובץ" Value="mnuFile">                        
+                        <asp:MenuItem NavigateUrl="~/Content1.aspx?screen=mnuScr1" Text="מסך 1" Value="mnuScr1"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Main.aspx?screen=mnuScr2" Text="מסך 2" Value="mnuScr2"></asp:MenuItem>
+                    </asp:MenuItem>--%>
+                </Items>
+            
+                <StaticMenuItemStyle CssClass="dd" HorizontalPadding="25px" VerticalPadding="3px" />             
+                <StaticMenuStyle CssClass="MenuStyle" />
+        </asp:Menu>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" > 
+            <%--<h1>fggg</h1>--%>                           
+        </asp:ContentPlaceHolder>
+    </div>
+        
+    </form>
+</body>
+</html>
